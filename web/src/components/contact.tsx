@@ -1,8 +1,8 @@
 // Contact component
 import React from "react";
-import {Props} from "@/components/profile";
+import {ContactProps} from "@/components/profile";
 
-const Contact: React.FC<Props> = ({ email, phone, socialMediaLinks }) => (
+const Contact: React.FC<ContactProps> = ({ email, phone, socialMediaLinks }) => (
     <section className="mt-8">
         <h2 className="text-xl font-bold mb-2">Contact</h2>
         <p>Email: {email}</p>

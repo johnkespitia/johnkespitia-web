@@ -1,8 +1,8 @@
 // Experience component
 import React from "react";
-import {Props} from "@/components/profile";
+import {ExperienceProps} from "@/components/profile";
 
-const Experience: React.FC<Props> = ({ experiences }) => (
+const Experience: React.FC<ExperienceProps> = ({ experiences }) => (
     <section className="my-8">
         <h2 className="text-2xl font-bold mb-4">Experience</h2>
         {experiences.map((experience, index) => (

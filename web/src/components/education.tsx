@@ -1,8 +1,8 @@
 // Education component
 import React from "react";
-import {Props} from "@/components/profile";
+import {EducationProps} from "@/components/profile";
 
-const Education: React.FC<Props> = ({ education }) => (
+const Education: React.FC<EducationProps> = ({ education }) => (
     <section className="my-8">
         <h2 className="text-2xl font-bold mb-4">Education</h2>
         {education.map((edu, index) => (

@@ -1,7 +1,7 @@
 import React from "react";
-import {Props} from "@/components/profile";
+import {ProjectsProps} from "@/components/profile";
 
-const Projects: React.FC<Props> =  ({ projects }) => (
+const Projects: React.FC<ProjectsProps> =  ({ projects }) => (
     <section className="my-8">
         <h2 className="text-2xl font-bold mb-4">Projects</h2>
         {projects.map((project, index) => (

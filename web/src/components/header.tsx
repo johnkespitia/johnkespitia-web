@@ -1,8 +1,8 @@
 // Header component
-import {Props} from "@/components/profile";
+import {HeaderProps} from "@/components/profile";
 import React from "react";
 
-const Header: React.FC<Props> = ({ name, tagline, profilePicture, altProfilePicture }) => (
+const Header: React.FC<HeaderProps> = ({ name, tagline, profilePicture, altProfilePicture }) => (
     <header className="bg-gray-200 py-8 text-center">
         <h1 className="text-3xl font-bold">{name}</h1>
         <h2 className="text-xl text-gray-600">{tagline}</h2>

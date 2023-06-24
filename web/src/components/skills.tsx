@@ -1,7 +1,7 @@
 import React from "react";
-import {Props} from "@/components/profile";
+import {SkillsProps} from "@/components/profile";
 
-const Skills: React.FC<Props> = ({ skills }) => (
+const Skills: React.FC<SkillsProps> = ({ skills }) => (
     <section className="my-8">
         <h2 className="text-2xl font-bold mb-4">Skills</h2>
         <ul className="flex flex-wrap">

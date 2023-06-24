@@ -54,7 +54,7 @@ export default function Home() {
     };
   return (
       <div  className="container mx-auto p-4">
-          <Header name={profileData.name} tagline={profileData.tagline} profilePicture={profileData.profilePicture} />
+          <Header name={profileData.name} tagline={profileData.tagline} profilePicture={profileData.profilePicture}  altProfilePicture={""}/>
           <About summary={profileData.summary} />
           <Experience experiences={profileData.experiences}/>
           <Education education={profileData.education} />
