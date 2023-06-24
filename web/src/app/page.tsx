@@ -15,7 +15,7 @@ export default function Home() {
         altProfilePicture: "",
         name: "John Kespitia",
         tagline: "Software Developer",
-        profilePicture: "https://example.com/profile-picture.jpg",
+        profilePicture: "/images/profilePic.png",
         summary: "Experienced software developer specializing in React and Next.js.",
         experiences: [
             {
