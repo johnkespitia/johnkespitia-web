@@ -1,5 +1,6 @@
-import Image from 'next/image'
 import {Props} from "@/components/profile";
+
+import profileData from "@/data/profileData";
 import Header from "@/components/header";
 import About from "@/components/about";
 import Experience from "@/components/experience";
@@ -11,62 +12,47 @@ import Recommendations from "@/components/recomendation";
 import Contact from "@/components/contact";
 
 export default function Home() {
-    const profileData: Props = {
-        altProfilePicture: "",
-        name: "John Kespitia",
-        tagline: "Software Developer",
-        profilePicture: "/images/profilePic.png",
-        summary: "Experienced software developer specializing in React and Next.js.",
-        experiences: [
-            {
-                title: "Software Engineer",
-                company: "ABC Company",
-                description: "Developed web applications using React.js and Next.js.",
-            },
-            // Add more experiences here
-        ],
-        education: [
-            {
-                degree: "Bachelor of Science in Computer Science",
-                institution: "XYZ University",
-                date: "2015-2019",
-            },
-            // Add more education details here
-        ],
-        skills: ["React.js", "Next.js", "JavaScript", "HTML", "CSS"],
-        projects: [
-            {
-                title: "Project 1",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                technologies: "React.js, Node.js, MongoDB",
-            },
-            // Add more projects here
-        ],
-        achievements: ["Outstanding Performance Award 2020", "Certification in XYZ"],
-        recommendations: ["John is a highly skilled developer with great attention to detail."],
-        email: "john@example.com",
-        phone: "123-456-7890",
-        socialMediaLinks: [
-            { name: "LinkedIn", url: "https://www.linkedin.com/in/johnkespitia/" },
-            // Add more social media links here
-        ]
-
-    };
+    const {
+        name,
+        tagline,
+        profilePicture,
+        altProfilePicture,
+        summary,
+        experiences,
+        education,
+        skills,
+        projects,
+        achievements,
+        recommendations,
+        email,
+        phone,
+        socialMediaLinks,
+    }: Props = profileData;
   return (
-      <div  className="container mx-auto p-4">
-          <Header name={profileData.name} tagline={profileData.tagline} profilePicture={profileData.profilePicture}  altProfilePicture={""}/>
-          <About summary={profileData.summary} />
-          <Experience experiences={profileData.experiences}/>
-          <Education education={profileData.education} />
-          <Skills skills={profileData.skills}/>
-          <Projects projects={profileData.projects}/>
-          <Achievements achievements={profileData.achievements}/>
-          <Recommendations recommendations={profileData.recommendations}/>
+      <div  className="container mx-auto bg-white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
+              <div className="col-span-1 md:col-span-2">
+                  <div className="space-y-8">
+          <About summary={summary} />
+          <Experience experiences={experiences}/>
+          <Education education={education} />
+
+          <Projects projects={projects}/>
+                  </div>
+              </div>
+              <div className="col-span-1">
+                  <div className="space-y-8">
+                      {achievements.length > 0 && <Achievements achievements={achievements}/>}
+              <Skills skills={skills}/>
+                      {recommendations.length > 0 && <Recommendations recommendations={recommendations}/>}
           <Contact
-              email={profileData.email}
-              phone={profileData.phone}
-              socialMediaLinks={profileData.socialMediaLinks}
+              email={email}
+              phone={phone}
+              socialMediaLinks={socialMediaLinks}
           />
+                  </div>
+              </div>
+          </div>
       </div>
   )
 }
