@@ -43,7 +43,7 @@ const ExperienceAccordion: React.FC<Experience> = ({ title, company, description
             </button>
             {expanded && (
                 <div className="px-4 pt-2 pb-4">
-                    <ReactMarkdown plugins={[gfm]} components={{ a: LinkRenderer }} children={description} className="markdown-text" />
+                    <ReactMarkdown remarkPlugins={[gfm]} components={{ a: LinkRenderer }} className="markdown-text" >{description}</ReactMarkdown>
                     <Skills skills={skills} title={"Skills used"} />
                 </div>
             )}

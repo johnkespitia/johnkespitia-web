@@ -2,6 +2,7 @@
 import {ContactProps, HeaderProps} from "@/components/profile";
 import React from "react";
 import NavBar from "@/components/menu";
+import Image from 'next/image';
 import { FaEnvelope, FaPhone, FaFacebook, FaTwitter, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 const Header: React.FC<HeaderProps & ContactProps> = ({ name, tagline, profilePicture, altProfilePicture, email, phone, socialMediaLinks }) => (
     <div className={"container mx-auto "}>
@@ -11,7 +12,9 @@ const Header: React.FC<HeaderProps & ContactProps> = ({ name, tagline, profilePi
         <div className="grid grid-cols-12 gap-4">
             <div className="col-span-12 md:col-span-8">
                 <div className="flex items-center ml-5">
-                    <img className="rounded-full border-4 border-gray-700 w-32 h-32" src={profilePicture} alt={altProfilePicture} />
+                    <div className="rounded-full border-4 border-gray-700 w-32 h-32">
+                        <Image src={profilePicture} alt={altProfilePicture} width={200} height={200} />
+                    </div>
                     <div className="ml-4">
                         <h1 className="text-3xl font-bold">{name}</h1>
                         <h2 className="text-xl text-gray-600">{tagline}</h2>

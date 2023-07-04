@@ -6,10 +6,10 @@ import {FaCheckCircle} from "react-icons/fa";
 
 const Contact: React.FC<ContactProps> = () => {
         const [formData,setFormData] = useState({})
-        const [loading,setLoading] = useState(false)
-        const [response,setResponse] = useState(null)
-        const formRef = useRef<HTMLFormElement>(null);
-        const saveData = (evt) => {
+        const [loading,setLoading] = useState<boolean>(false)
+        const [response,setResponse] = useState<string | null>(null)
+        const formRef = useRef<HTMLFormElement | null>(null);
+        const saveData = (evt: any) => {
                 setFormData({
                         ...formData,
                         [evt.target.name]: evt.target.value
@@ -38,7 +38,10 @@ const Contact: React.FC<ContactProps> = () => {
                 setResponse("success");
 
                 setTimeout(() => {
-                        formRef.current.reset()
+                        if(formRef.current !== null){
+                                formRef.current.reset()
+                        }
+
                         setResponse(null);
                 }, 5000);
         };

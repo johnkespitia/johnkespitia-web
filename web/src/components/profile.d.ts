@@ -41,7 +41,7 @@ export interface Props {
     socialMediaLinks: SocialMediaLink[];
 }
 
-export interface HeaderProps extends Omit<Props, 'summary' | 'education' | 'projects' | 'achievements' | 'experiences' | 'recommendations' | 'skills' | 'phone' | 'socialMediaLinks' | 'email'| 'tagline'> {}
+export interface HeaderProps extends Omit<Props, 'summary' | 'education' | 'projects' | 'achievements' | 'experiences' | 'recommendations' | 'skills' | 'phone' | 'socialMediaLinks' | 'email'> {}
 
 export interface AboutProps extends Omit<Props, 'name' | 'profilePicture' | 'education' | 'projects' | 'achievements' | 'experiences' | 'recommendations' | 'skills' | 'phone' | 'socialMediaLinks' | 'email' | 'altProfilePicture' | 'tagline'> {}
 
@@ -49,7 +49,9 @@ export interface ExperienceProps extends Omit<Props, 'name' | 'profilePicture' |
 
 export interface EducationProps extends Omit<Props, 'name' | 'profilePicture' | 'summary' | 'projects' | 'achievements' | 'experiences' | 'recommendations' | 'skills' | 'phone' | 'socialMediaLinks' | 'email' | 'altProfilePicture' | 'tagline'> {}
 
-export interface SkillsProps extends Omit<Props, 'name' | 'profilePicture' | 'summary' |'education' | 'projects' | 'achievements' | 'experiences' | 'recommendations' | 'phone' | 'socialMediaLinks' | 'email' | 'altProfilePicture'| 'tagline'> {}
+export interface SkillsProps extends Omit<Props, 'name' | 'profilePicture' | 'summary' |'education' | 'projects' | 'achievements' | 'experiences' | 'recommendations' | 'phone' | 'socialMediaLinks' | 'email' | 'altProfilePicture'| 'tagline'> {
+    title: string
+}
 
 export interface ProjectsProps extends Omit<Props, 'name' | 'profilePicture' | 'summary' |'education' | 'achievements' | 'experiences' | 'recommendations' | 'skills' | 'phone' | 'socialMediaLinks' | 'email' | 'altProfilePicture'| 'tagline'> {}
 

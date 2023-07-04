@@ -21,5 +21,10 @@ front-ut: ## run unit test for frontend app
 front-e2e: ## run e2e test for frontend app
 	$(RUN_APP) npm run e2e
 
+front-build: ## run npm run build
+	$(RUN_APP) npm run build
+
+
 restart-services:  ## restart all services
 	docker compose down && docker compose build && docker compose up -d
+

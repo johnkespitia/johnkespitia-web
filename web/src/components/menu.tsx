@@ -28,6 +28,9 @@ const NavBar: React.FC = () => {
 
 interface NavLinkProps {
     href: string;
+    children: string
+    className: string
+    onClick?: (event: React.MouseEvent) => void | null
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ href, children, className }) => {

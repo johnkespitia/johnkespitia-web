@@ -1,7 +1,5 @@
 import {Props} from "@/components/profile";
-
 import profileData from "@/data/profileData";
-import Header from "@/components/header";
 import About from "@/components/about";
 import Experience from "@/components/experience";
 import Education from "@/components/education";
@@ -13,10 +11,6 @@ import Contact from "@/components/contact";
 
 export default function Home() {
     const {
-        name,
-        tagline,
-        profilePicture,
-        altProfilePicture,
         summary,
         experiences,
         education,
@@ -43,7 +37,7 @@ export default function Home() {
               <div className="col-span-1">
                   <div className="space-y-8">
                       {achievements.length > 0 && <Achievements achievements={achievements}/>}
-              <Skills skills={skills}/>
+              <Skills skills={skills} title={"Skills"}/>
                       {recommendations.length > 0 && <Recommendations recommendations={recommendations}/>}
           <Contact
               email={email}
